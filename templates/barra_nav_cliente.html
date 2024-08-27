@@ -1,0 +1,91 @@
+<nav id="nav-bar" class="flex-no-wrap relative flex w-full  items-center justify-between bg-blue-800 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
+    <div class="flex w-full flex-wrap items-center justify-between">
+
+
+  <!-- Collapsible navigation container -->
+  <div
+    class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+    id="navbarSupportedContent1"
+    data-twe-collapse-item>
+    <!-- Logo -->
+    <a
+      class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:to-black focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+     >
+      <img
+        src="/static/img/logo.weston.png"
+        style="height: 15px"
+        alt="TE Logo"
+        loading="lazy" />
+    </a>
+    <!-- Left navigation links -->
+    <ul
+      class="list-style-none me-auto flex flex-col ps-0 lg:flex-row"
+      data-twe-navbar-nav-ref>
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <!-- Dashboard link -->
+        <a
+          class="text-white font-bold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+          href="/inicio_cliente"
+          data-twe-nav-link-ref
+          >INICIO</a
+        >
+      </li>
+      <!-- Team link -->
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <a
+          class="text-white font-bold hover:text-black/80 hover:ease-in-out lg:px-2"
+          href="/productos"
+          data-twe-nav-link-ref
+          >PRODUCTOS</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right elements -->
+  <div class="relative flex items-center">
+    
+    <!-- Icon -->
+    <div class="flex flex-row">
+    <a class="me-4  text-white dark:text-white flex flex-row" >
+      <span id="openbtn" onclick="openNav()" class="[&>svg]:w-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+
+        </svg>
+  
+      </span>
+       (<span class="text-white py-1" id="contador-productos">0</span>)
+    </a>
+</div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="text-indigo-200 text-4xl font-bold py-6 flex justify-center items-center">Carrito de Compras</h2>
+        <ul id="lista-carrito" class="list-group"></ul>
+        <p id="total-carrito" class="text-red-600 font-bold py-3 text-2xl">Total: $0.00</p>
+        <button onclick="vaciarCarrito()" class="btn btn-danger">Vaciar Carrito</button>
+        <button onclick="confirmarCompra()" class="btn btn-success">Confirmar Carrito</button>
+
+    </div>
+
+    <!-- First dropdown container -->
+    <div
+      class="relative"
+      data-twe-dropdown-ref
+      data-twe-dropdown-alignment="end">
+
+      <!-- CERRAR SESION-->
+    <button id="close"> 
+        <a href="/" class="text-white [&>svg]:w-8">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+    </svg>
+    </button></a>
+  </div>
+
+</div>
+</nav>
